@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Bingo from './components/bingo';
+import React from "react";
 
+import { BrowserRouter, Link, Routes ,Route } from 'react-router-dom';
+import User from './components/user';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+      <Routes>
+          <Route path="" element={<User/>}/>
+          <Route path="/bingo"  element={<Bingo/>}/>
+      </Routes>
+  
+  </BrowserRouter>
   );
 }
 
