@@ -7,7 +7,8 @@ export default function generateBingo() {
     for ( let i = 0; i < 1; i++ ) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
-    result = result+ Math.floor(Math.random()*70)+1
+    let r = Math.floor(Math.random()*70)+1
+    result = result+r
 //    console.log('random')
 //    console.log(''+result)
     return ''+result;
