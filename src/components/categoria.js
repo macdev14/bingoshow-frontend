@@ -34,10 +34,14 @@ export default function Categoria(){
     return(
         <> 
         <Grid container spacing={2} justifyContent="center" alignItems="center" minHeight={160}>
+                
+                
                 <Item>
                     <Typography variant="h3">Categorias</Typography>
                 </Item>
-             </Grid>
+&nbsp;{'\n'}
+</Grid>
+
 
         <Grid container spacing={2} justifyContent="center" alignItems="center" minHeight={160}> 
     <Grid item xs={4}  justifyContent="center" alignItems="center">
@@ -49,7 +53,7 @@ export default function Categoria(){
      
         return(
             <>
-         <Item key={data.id} style={{ backgroundColor:'#4040ff', color:'#FFF' }} onClick={()=>{localStorage.setItem('categoria', data.id ); return navigate('/') }}>
+         <Item key={data.id} style={{ backgroundColor:'#4040ff', color:'#FFF' }} onClick={()=>{localStorage.setItem('categoria', data.id ); alert(data.nome+' definido como categoria.');return navigate('/') }}>
           <Typography variant="h4" >
           {data.nome} </Typography> 
           
@@ -70,6 +74,11 @@ export default function Categoria(){
 
     </Grid>
 </Grid>
+<Grid container spacing={2} justifyContent="center" alignItems="center" minHeight={160}>
+                <Item>
+                    <Typography variant="h3">Voltar</Typography>
+                </Item>
+             </Grid>
 </>
     )
 }

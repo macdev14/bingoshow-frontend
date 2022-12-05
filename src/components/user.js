@@ -40,15 +40,24 @@ export default function User(){
     
      <TextField id="outlined-basic" label="Nome" variant="outlined" onChange={(e)=>( setName(e.target.value))}  />
      &nbsp;{"\n"}
-     <Typography display="block"> 
-     <Button variant="contained" onClick={createUser} >Jogar</Button>
+     <Typography display="block" > 
+     <Button variant="contained" onClick={createUser} >
+     <Typography display="block" variant="h3">
+        Jogar
+        </Typography>
+        </Button>
      &nbsp;{"\n"}
     
      </Typography>
      &nbsp;{"\n"}
      <Typography display="block">
     
-     <Button variant="contained" onClick={()=>(navigate('/config'))} >Configurações</Button> </Typography>
+     <Button variant="contained" onClick={()=>(navigate('/config'))} >
+     <Typography display="block" variant="h3">
+        Configurações
+        </Typography>
+        
+        </Button> </Typography>
     </Grid>
 </Grid>
 
