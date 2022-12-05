@@ -39,7 +39,16 @@ export default function User(){
     <Typography variant="h1">The Bingo Show</Typography>
     
      <TextField id="outlined-basic" label="Nome" variant="outlined" onChange={(e)=>( setName(e.target.value))}  />
+     &nbsp;{"\n"}
+     <Typography display="block"> 
      <Button variant="contained" onClick={createUser} >Jogar</Button>
+     &nbsp;{"\n"}
+    
+     </Typography>
+     &nbsp;{"\n"}
+     <Typography display="block">
+    
+     <Button variant="contained" onClick={()=>(navigate('/config'))} >Configurações</Button> </Typography>
     </Grid>
 </Grid>
 

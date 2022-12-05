@@ -5,6 +5,9 @@ import React from "react";
 
 import { BrowserRouter, Link, Routes ,Route } from 'react-router-dom';
 import User from './components/user';
+import Help from './components/help'
+import Config from './components/config';
+import Categoria from './components/categoria'
 function App() {
   return (
     <BrowserRouter>
@@ -13,6 +16,9 @@ function App() {
       <Routes>
           <Route path="" element={<User/>}/>
           <Route path="/bingo"  element={<Bingo/>}/>
+          <Route path="/config/help"  element={<Help/>}/>
+          <Route path="/config"  element={<Config/>}/>
+          <Route path="/config/category"  element={<Categoria/>}/>
       </Routes>
   
   </BrowserRouter>
